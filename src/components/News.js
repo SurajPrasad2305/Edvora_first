@@ -136,17 +136,27 @@ handlenearest= async() =>{
 
     return (
 
+        // nam = {this.obj_user.name}+"";
+        <div className='' id='back'>
+            {/* <NavBar/> */}
+            <nav id='navbar' className="navbar">
+         <div className="container" id='navb'>
 
-        <div className='container my-3'>
-            <NavBar/>
-            <h2>{this.obj_user.station_code} </h2>
-            <h2>{this.obj_user.name}</h2>
+           <a id='edvora' className="navbar-brand" href="/">Edvora</a>
+           <div id='name'>{this.obj_user.name}  </div>
+           <div ><img src={this.obj_user.url} id='img1' alt="" /></div>
+       
+         </div>
+       </nav>
+            {/* <h2>{this.obj_user.station_code} </h2>
+            <h2>{this.obj_user.name}</h2> */}
 
             {/* <div className="d-flex justify-content-around"> */}
-            <button type="button" className="btn btn-danger" onClick={this.handlenearest}>nearest</button>
+            <div id='buttons'>
+            <a type="button" id='buttons' className="btn " onClick={this.handlenearest}><strong>Nearest rides ({this.obj_nearest.length})</strong></a>
             
-            <button type="button" className="btn btn-danger" onClick={this.handleupcoming}>upcoming</button>
-            <button type="button" className="btn btn-danger" onClick={this.handlepast}>past</button>
+            <a id='buttons' type="button" className="btn " onClick={this.handleupcoming}><strong>Upcoming Rides ({this.obj_upcoming.length})</strong></a>
+            <a type="button" id='buttons' className="btn " onClick={this.handlepast}><strong>Past rides ({this.obj_past.length})</strong></a></div>
             {/* <a id='anchor' className="nav-link active" onClick={this.handlepast} style={{cursor:"pointer"}} aria-current="page">Active</a> */}
 
             {/* </div> */}

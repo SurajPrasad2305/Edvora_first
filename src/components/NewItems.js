@@ -9,31 +9,29 @@ export class NewItems extends Component {
 
         let { id, originstation, stationpath, date, city, state, imageurl } = this.props;
         return (
-            <div class="flex-container">
-                {/* <div className="card" style={{ width: "18rem" }}> */}
-                {/* <div> */}
-                <div>
-                    <img id='image' src={imageurl} className="card-img-top" alt="..." />
+            // <div class="flex-container">
+                <div class="rides" id='rides'>
+                    <div class="ride" id='ride'>
+                        <div class="ride-image" id='img'>
+                            <img src="https://picsum.photos/200" alt="" class="ride-image" />
+                        </div>
+                        <div class="ride-data" id='ride_data'>
+                            <div>Ride Id: {id}</div>
+                            <div>Origin Station:  {originstation}</div>
+                            <div>station_path: {stationpath}</div>
+                            <div>Date: {date}</div>
+                            <div>Distance: 0</div>
+                        </div>
+                        <div class="ride-location" id='location'>
+                            <div>
+                                <div class="location-button" id='lb'>{city}</div>
+                            </div>
+                            <div>
+                                <div class="location-button" id='lb'>{state}</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {/* </div> */}
-                {/* <div className="card-body"> */}
-                <div>
-
-                    <li className="card-title"> Ride id : {id}</li>
-                    <li className="origin station">origin station : {originstation}</li>
-                    <li className="station-path"> station_path : {stationpath}</li>
-                    <li className="date"> date : {date}</li>
-
-                    <li className="city">{city}</li>
-                    <li className="state">{state}</li>
-                </div>
-                {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                {/* <a href="/" className="btn btn-primary">Go somewhere</a> */}
-                {/* </div> */}
-                {/* </div> */}
-                {/* </div> */}
-                
-            </div>
         )
     }
 }
